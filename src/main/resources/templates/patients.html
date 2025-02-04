@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>patients</title>
+</head>
+<body>
+<form id="patientPrescriptionForm" th:object="${patientPrescriptionDto}" th:action="@{/patients}" th:method="POST">
+  <input type="text" class="form-control" id="firstName" placeholder="firstName">
+  <input type="text" class="form-control" id="lastName" placeholder="lastName">
+  <input type="text" class="form-control" id="sickness" placeholder="sickness">
+  <input type="text" class="form-control" id="description" placeholder="description">
+  <input type="submit" class="btn btn-primary" id="savePatient" value="Submit">
+</form>
+
+<!--<h1 th:if="${#lists.isEmpty(patients)}">No Content!</h1>-->
+<!--<table th:if="${not #lists.isEmpty(patients)}">-->
+<!--  <thead>-->
+<!--  <tr>-->
+<!--    <th>Id</th>-->
+<!--    <th>firstName</th>-->
+<!--    <th>lastName</th>-->
+<!--    <th>sickness</th>-->
+<!--    <th>description</th>-->
+<!--    <th>Operation</th>-->
+<!--  </tr>-->
+<!--  </thead>-->
+<!--  <tbody>-->
+<!--  <tr th:each="patient:${patients}">-->
+<!--    <td th:text="${patient.id}"></td>-->
+<!--    <td th:text="${patient.firstName}"></td>-->
+<!--    <td th:text="${patient.lastName}"></td>-->
+<!--    <td th:text="${patient.sickness}"></td>-->
+<!--    <td th:text="${patient.getPrescription.description}"></td>-->
+<!--    <td>-->
+<!--      <button>Edit</button>-->
+<!--      <button>Remove</button>-->
+<!--    </td>-->
+<!--  </tr>-->
+<!--  </tbody>-->
+<!--</table>-->
+
+</body>
+</html>
